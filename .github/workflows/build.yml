@@ -32,5 +32,5 @@ jobs:
         echo $template_lines_trimmed_start
         template_lines_trimmed_start=$( dotnet new | grep "blazor-" | cut -c ${column_1_width}- | sed 's/ /_/g' )
         echo $template_lines_trimmed_start
-        templates=$( dotnet new | grep "blazor-" | cut -c ${column_1_width}- | cut -d ' ' -f1 )
+        templates=$( dotnet new | grep "blazor-" | cut -c ${column_1_width}- | cut -d ' ' -f7 )
         echo $templates
