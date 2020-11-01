@@ -27,5 +27,9 @@ jobs:
       run: |
         dotnet new -i bin/Release/BlazorTemplates*.nupkg
         column_1_width=$( dotnet new | grep -e "----" | cut -d ' ' -f1 | wc -c )
-        templates=$( dotnet new | grep "blazor-" | cut -c ${column_1_width}- | cut -d ' ' -f2 )
+        template_lines=$( dotnet new | grep "blazor-" )
+        echo $template_lines
+        template_lines_trimmed_start=$( echo $template_lines | cut -c ${column_1_width}- )
+        echo $template_lines_trimmed_start
+        templates=$( echo $template_lines_trimmed_start | cut -d ' ' -f1 )
         echo $templates
