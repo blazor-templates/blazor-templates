@@ -1,0 +1,9 @@
+﻿{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Blazor Templates Project, Stefan Lörwald",
+  "classifications": [ "Web", "Blazor" ],
+  "identity": "BlazorTemplates.Vanilla.Server",
+  "name": "Blazor without CSS framework, set up for Blazor Server.",
+  "shortName": "blazor-vanilla-server",
+  "sourceName": "MyTemplate"
+}

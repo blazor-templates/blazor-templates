@@ -1,0 +1,33 @@
+﻿<!--start:server-->@*THIS IS AN AUTO-GENERATED FILE! DO NOT MODIFY, MODIFY THE TEMPLATE INSTEAD*@
+@page "/"
+@namespace MyTemplate.Server.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}<!--end:server--><!--start:wasm--><!--THIS IS AN AUTO-GENERATED FILE! DO NOT MODIFY, MODIFY THE TEMPLATE INSTEAD--><!--end:wasm-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>MyTemplate</title>
+    <!--start:wasm--><base href="/" /><!--end:wasm--><!--start:server--><base href="~/" /><!--end:server-->
+    <!--start:wasm--><link href="MyTemplate.Wasm.styles.css" rel="stylesheet" /><!--end:wasm--><!--start:server--><link href="MyTemplate.Server.styles.css" rel="stylesheet" /><!--end:server-->
+    <link href="_content/MyTemplate.Components/site.css" rel="stylesheet" />
+</head>
+
+<body>
+    <app id="app">
+        <!--start:wasm-->Loading...<!--end:wasm--><!--start:server--><component type="typeof(MyTemplate.Components.App)" render-mode="ServerPrerendered" /><!--end:server-->
+    </app>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+    <!--start:wasm--><script src="_framework/blazor.webassembly.js"></script><!--end:wasm--><!--start:server--><script src="_framework/blazor.server.js"></script><!--end:server-->
+</body>
+
+</html>

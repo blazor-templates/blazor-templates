@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+	<Import Project="..\Components\build\*.targets" />
+	<Target Name="GenerateBlazorEntrypoint" BeforeTargets="BeforeBuild">
+		<GenerateBlazorEntrypointTask BlazorEnvironment="server" Template="..\Components\build\index.html" />
+	</Target>
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<RootNamespace>MyTemplate.Server</RootNamespace>
+		<AssemblyName>MyTemplate.Server</AssemblyName>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Components\MyTemplate.Components.csproj" />
+	</ItemGroup>
+
+</Project>
