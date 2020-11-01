@@ -12,7 +12,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        shell: bash
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET Core
@@ -29,7 +31,7 @@ jobs:
         column_1_width=$( dotnet new | grep -e "----" | cut -d ' ' -f1 | wc -c )
         templates=$( dotnet new | grep "blazor-" | cut -c ${column_1_width}- | cut -d ' ' -f7 )
         echo "Testing templates ${templates}"
-        while IFS=read -r template_name; do
+        while IFS= read -r template_name; do
            echo "Testing template ${template_name}"
            mkdir tmp
            cd tmp
