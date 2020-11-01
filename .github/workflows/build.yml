@@ -22,9 +22,9 @@ jobs:
       with:
         dotnet-version: ${{ env.dotnet_version }}
     - name: Install dependencies
-      run: dotnet restore
+      run: dotnet restore templates.csproj
     - name: Build
-      run: dotnet build -c Release --no-restore
+      run: dotnet build -c Release --no-restore templates.csproj
     - name: Test package
       run: |
         dotnet new -i bin/Release/BlazorTemplates*.nupkg

@@ -12,6 +12,7 @@
 	<ItemGroup>
 		<Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />
 		<Compile Remove="**\*" />
+		<None Remove="README.md" />
 	</ItemGroup>
 
 </Project>
