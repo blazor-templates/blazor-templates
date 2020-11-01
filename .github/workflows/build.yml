@@ -9,7 +9,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  all:
 
     runs-on: ubuntu-latest
     defaults:
@@ -25,13 +25,6 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build -c Release --no-restore
-  test:
-    needs: build
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-    steps:
     - name: Test package
       run: |
         dotnet new -i bin/Release/BlazorTemplates*.nupkg
@@ -46,3 +39,6 @@ jobs:
            cd ..
            rm -rf tmp
         done <<< "${templates}"
+    - name: Deploy
+      run: |
+        dotnet nuget push -s https://api.nuget.org/v3/index.json bin/Release/BlazorTemplates*.nupkg -k ${{ secrets.NUGETKEY }}
