@@ -13,4 +13,4 @@ dotnet new -i BlazorTemplates
 
 # Source code for templates
 
-The source code for the templates can be found in the respective repo, see [this list](https://github.com/blazor-templates).
+The source code for the templates can be found in the [templates](https://github.com/blazor-templates/blazor-templates/tree/main/templates) folder.
