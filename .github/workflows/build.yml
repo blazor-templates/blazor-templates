@@ -36,4 +36,4 @@ jobs:
            dotnet build
            cd ..
            rm -rf tmp
-       done <<< "${templates}"
+        done <<< "${templates}"
