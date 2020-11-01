@@ -25,12 +25,18 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build -c Release --no-restore
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
     - name: Test package
       run: |
         dotnet new -i bin/Release/BlazorTemplates*.nupkg
         column_1_width=$( dotnet new | grep -e "----" | cut -d ' ' -f1 | wc -c )
         templates=$( dotnet new | grep "blazor-" | cut -c ${column_1_width}- | cut -d ' ' -f7 )
-        echo "Testing templates ${templates}"
         while IFS= read -r template_name; do
            echo "Testing template ${template_name}"
            mkdir tmp
