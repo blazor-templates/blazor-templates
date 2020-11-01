@@ -3,7 +3,7 @@
   "author": "Blazor Templates Project, Stefan Lörwald",
   "classifications": [ "Web", "Blazor" ],
   "identity": "BlazorTemplates.Vanilla.DualSolution",
-  "name": "Blazor without CSS framework, set up for Wasm and Server using a shared components project.",
+  "name": "Blazor without CSS framework, set up for Wasm and Server using a shared components project",
   "shortName": "blazor-vanilla-dualsolution",
   "sourceName": "MyTemplate"
 }

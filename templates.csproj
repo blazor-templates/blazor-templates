@@ -1,16 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
+	<Import Project="package.csproj" Condition="Exists('package.csproj')" />
 	<PropertyGroup>
-		<PackageType>Template</PackageType>
-		<PackageVersion>0.1.0</PackageVersion>
-		<PackageId>BlazorTemplates</PackageId>
-		<Title>Blazor Templates</Title>
-		<Authors>Stefan Lörwald</Authors>
-		<Description>A collection of blazor templates.</Description>
-		<PackageTags>dotnet-new;templates</PackageTags>
 		<TargetFramework>netstandard2.0</TargetFramework>
-		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-
+		
+		<PackageType>Template</PackageType>
 		<IncludeContentInPack>true</IncludeContentInPack>
 		<IncludeBuildOutput>false</IncludeBuildOutput>
 		<ContentTargetFolders>content</ContentTargetFolders>
