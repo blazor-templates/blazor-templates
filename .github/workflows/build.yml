@@ -1,0 +1,31 @@
+name: Build & deploy templates
+
+env:
+  dotnet_version: 5.0.100-rc.2.20479.15
+  target_framework: netstandard2.0
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: ${{ env.dotnet_version }}
+    - name: Install dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build -c Release --no-restore
+    - name: Test package
+      run: |
+        dotnet new -i bin/Release/BlazorTemplates*.nupkg
+        column_1_width=$( dotnet new | grep -e "----" | cut -d ' ' -f1 | wc -c )
+        templates=$( dotnet new | grep "blazor-" | cut -c ${column_1_width}- )
+        echo $templates
