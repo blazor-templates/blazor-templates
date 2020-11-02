@@ -11,6 +11,22 @@ Add the templates to your machine by running
 dotnet new -i BlazorTemplates
 ```
 
+# Usage
+
+## 1. Pick template
+
+Browse the templates (`dotnet new` to see them all), to find the name of the template you want to install, e.g. `blazor-vanilla-wasm`.
+
+## 2. Create new project
+
+```bash
+mkdir my_project
+cd my_project
+dotnet new blazor-vanilla-wasm
+# or
+dotnet new blazor-vanilla-wasm --name MyProjectName
+```
+
 # Source code for templates
 
 The source code for the templates can be found in the [templates](https://github.com/blazor-templates/blazor-templates/tree/main/templates) folder.
