@@ -41,4 +41,15 @@ jobs:
         done <<< "${templates}"
     - name: Deploy
       run: |
-        dotnet nuget push -s https://api.nuget.org/v3/index.json bin/Release/BlazorTemplates*.nupkg -k ${{ secrets.NUGETKEY }}
+        dotnet nuget push -s https://api.nuget.org/v3/index.json bin/Release/BlazorTemplates*.nupkg -k ${{ secrets.NUGETKEY }} > push_log
+        if [ $? -ne 0 ]
+        then
+          if [ $(grep *409" push_log | wc -c) -eq 0 ]
+          then
+             echo "push to nuget failed, but not because the version already exists."
+             cat push_log
+             exit 1
+          else
+             echo "Conflict: version was already uploaded. This is fine if there should not have been any update to the templates"
+          fi
+        fi
