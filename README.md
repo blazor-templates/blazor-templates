@@ -1,4 +1,9 @@
 # blazor-templates
+
+[![Nuget](https://img.shields.io/nuget/v/BlazorTemplates)](https://www.nuget.org/packages/BlazorTemplates/)
+[![Nuget](https://img.shields.io/nuget/dt/BlazorTemplates)](https://www.nuget.org/packages/BlazorTemplates/)
+[![License](https://img.shields.io/github/license/blazor-templates/blazor-templates)](https://github.com/blazor-templates/blazor-templates)
+
 A collection of project templates for blazor
 
 The goal of this project is to maintain a set of project templates that get rid of the main challenges with new blazor projects (e.g. when one wants to use material design, one first needs to edit&remove a lot of files, before the project is properly set up).
