@@ -22,7 +22,7 @@
 	<!--PackageId, Version-->
 	<PropertyGroup>
 		<PackageId>BlazorTemplates</PackageId>
-		<PackageVersion>0.2.0</PackageVersion>
+		<PackageVersion>1.0.0</PackageVersion>
 	</PropertyGroup>
 	<!--Self Include-->
 	<ItemGroup>
