@@ -1,22 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
-
-	<PropertyGroup>
-		<TargetFramework>net5.0</TargetFramework>
-		<RootNamespace>MyTemplate.Components</RootNamespace>
-		<AssemblyName>MyTemplate.Components</AssemblyName>
-	</PropertyGroup>
-
-
-	<ItemGroup>
-		<SupportedPlatform Include="browser" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.0" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="build\" />
-	</ItemGroup>
-
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>MyTemplate.Components</RootNamespace>
+    <AssemblyName>MyTemplate.Components</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="build\" />
+  </ItemGroup>
 </Project>
