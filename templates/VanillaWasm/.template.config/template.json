@@ -5,5 +5,9 @@
   "identity": "BlazorTemplates.Vanilla.Wasm",
   "name": "Blazor without CSS framework, set up for Blazor WebAssembly",
   "shortName": "blazor-vanilla-wasm",
-  "sourceName": "MyTemplate"
+  "sourceName": "MyTemplate",
+  "tags": {
+    "type": "project",
+    "language": "C#"
+  }
 }
