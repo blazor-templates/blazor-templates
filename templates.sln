@@ -23,6 +23,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VanillaServer", "VanillaSer
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyTemplate", "templates\VanillaServer\MyTemplate.csproj", "{CA5D372A-454F-4DCD-8B09-50F5CFE109BC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".template.config", ".template.config", "{F933E6C6-99A0-4DA1-83C3-2AF4246EDCD7}"
+	ProjectSection(SolutionItems) = preProject
+		templates\VanillaDualSolution\.template.config\icon.png = templates\VanillaDualSolution\.template.config\icon.png
+		templates\VanillaDualSolution\.template.config\ide.host.json = templates\VanillaDualSolution\.template.config\ide.host.json
+		templates\VanillaDualSolution\.template.config\template.json = templates\VanillaDualSolution\.template.config\template.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".template.config", ".template.config", "{82211E16-6963-4948-B1D5-5469AD4987BF}"
+	ProjectSection(SolutionItems) = preProject
+		templates\VanillaServer\.template.config\icon.png = templates\VanillaServer\.template.config\icon.png
+		templates\VanillaServer\.template.config\ide.host.json = templates\VanillaServer\.template.config\ide.host.json
+		templates\VanillaServer\.template.config\template.json = templates\VanillaServer\.template.config\template.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".template.config", ".template.config", "{58B1D9C5-F8B3-4ACA-BA55-987D58DF2EC1}"
+	ProjectSection(SolutionItems) = preProject
+		templates\VanillaWasm\.template.config\icon.png = templates\VanillaWasm\.template.config\icon.png
+		templates\VanillaWasm\.template.config\ide.host.json = templates\VanillaWasm\.template.config\ide.host.json
+		templates\VanillaWasm\.template.config\template.json = templates\VanillaWasm\.template.config\template.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,6 +87,9 @@ Global
 		{F7B498CF-A132-4D18-885E-604BB05F917C} = {B469A476-AF75-4C93-B089-301399CA7738}
 		{691653EB-8B32-43F7-A678-59EED501BC8C} = {4FD43C4D-5121-41DB-82F0-B19D99B985C9}
 		{CA5D372A-454F-4DCD-8B09-50F5CFE109BC} = {691653EB-8B32-43F7-A678-59EED501BC8C}
+		{F933E6C6-99A0-4DA1-83C3-2AF4246EDCD7} = {71481CB2-F150-46B7-94E8-4CF0A20D8313}
+		{82211E16-6963-4948-B1D5-5469AD4987BF} = {691653EB-8B32-43F7-A678-59EED501BC8C}
+		{58B1D9C5-F8B3-4ACA-BA55-987D58DF2EC1} = {B469A476-AF75-4C93-B089-301399CA7738}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D5F2E43A-2F0D-44DD-9371-69B65146EF07}
