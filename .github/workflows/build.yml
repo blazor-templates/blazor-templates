@@ -26,7 +26,7 @@ jobs:
     - name: Build
       run: dotnet build -c Release --no-restore templates.csproj
     - name: Pack
-      run: dotnet pack -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -c Release -o app/packed --no-restore templates.csproj
+      run: dotnet pack -c Release -o app/packed --no-restore templates.csproj
     - name: Test package
       run: |
         dotnet new -i app/packed/*.nupkg
