@@ -25,9 +25,11 @@ jobs:
       run: dotnet restore templates.csproj
     - name: Build
       run: dotnet build -c Release --no-restore templates.csproj
+    - name: Pack
+      run: dotnet pack -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -c Release -o app/packed --no-restore templates.csproj
     - name: Test package
       run: |
-        dotnet new -i bin/Release/BlazorTemplates*.nupkg
+        dotnet new -i app/packed/*.nupkg
         column_1_width=$( dotnet new | grep -e "----" | cut -d ' ' -f1 | wc -c )
         templates=$( dotnet new | grep "blazor-" | cut -c ${column_1_width}- | cut -d ' ' -f7 )
         while IFS= read -r template_name; do
@@ -41,4 +43,4 @@ jobs:
         done <<< "${templates}"
     - name: Deploy
       run: |
-        dotnet nuget push -s https://api.nuget.org/v3/index.json bin/Release/BlazorTemplates*.nupkg -k ${{ secrets.NUGETKEY }} > push_log || grep "409" push_log
+        dotnet nuget push -s https://api.nuget.org/v3/index.json app/packed/*.nupkg -k ${{ secrets.NUGETKEY }} > push_log || grep "409" push_log
