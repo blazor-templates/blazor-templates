@@ -8,7 +8,7 @@
     <SupportedPlatform Include="browser" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.3" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="build\" />
