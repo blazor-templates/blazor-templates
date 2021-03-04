@@ -31,7 +31,7 @@ jobs:
       run: |
         dotnet new -i app/packed/*.nupkg
         column_1_width=$( dotnet new | grep -e "----" | cut -d ' ' -f1 | wc -c )
-        templates=$( dotnet new | grep "blazor-" | cut -c ${column_1_width}- | cut -d ' ' -f7 )
+        templates=$( dotnet new | cut -c ${column_1_width}- | grep "blazor-"  | sed 's/^[ ]*//' | cut -d ' ' -f1 )
         while IFS= read -r template_name; do
            echo "Testing template ${template_name}"
            mkdir tmp
