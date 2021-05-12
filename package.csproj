@@ -19,7 +19,7 @@
   <!--PackageId, Version-->
   <PropertyGroup>
     <PackageId>BlazorTemplates</PackageId>
-    <PackageVersion>1.0.6</PackageVersion>
+    <PackageVersion>1.0.7</PackageVersion>
   </PropertyGroup>
   <!--Self Include-->
   <ItemGroup>
