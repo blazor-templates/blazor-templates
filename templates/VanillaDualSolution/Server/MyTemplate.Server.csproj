@@ -4,7 +4,7 @@
     <GenerateBlazorEntrypointTask BlazorEnvironment="server" Template="..\Components\build\index.html" />
   </Target>
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <RootNamespace>MyTemplate.Server</RootNamespace>
     <AssemblyName>MyTemplate.Server</AssemblyName>
   </PropertyGroup>

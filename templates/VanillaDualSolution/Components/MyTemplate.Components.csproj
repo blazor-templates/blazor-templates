@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <RootNamespace>MyTemplate.Components</RootNamespace>
     <AssemblyName>MyTemplate.Components</AssemblyName>
   </PropertyGroup>
