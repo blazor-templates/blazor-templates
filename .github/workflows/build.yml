@@ -27,20 +27,20 @@ jobs:
       run: dotnet build -c Release --no-restore templates.csproj
     - name: Pack
       run: dotnet pack -c Release -o app/packed --no-restore templates.csproj
-    - name: Test package
-      run: |
-        dotnet new -i app/packed/*.nupkg
-        column_1_width=$( dotnet new | grep -e "----" | cut -d ' ' -f1 | wc -c )
-        templates=$( dotnet new | cut -c ${column_1_width}- | grep "blazor-"  | sed 's/^[ ]*//' | cut -d ' ' -f1 )
-        while IFS= read -r template_name; do
-           echo "Testing template ${template_name}"
-           mkdir tmp
-           cd tmp
-           dotnet new ${template_name} --name TestInstance
-           dotnet build
-           cd ..
-           rm -rf tmp
-        done <<< "${templates}"
+    #- name: Test package
+    #  run: |
+    #    dotnet new -i app/packed/*.nupkg
+    #    column_1_width=$( dotnet new | grep -e "----" | cut -d ' ' -f1 | wc -c )
+    #    templates=$( dotnet new | cut -c ${column_1_width}- | grep "blazor-"  | sed 's/^[ ]*//' | cut -d ' ' -f1 )
+    #    while IFS= read -r template_name; do
+    #       echo "Testing template ${template_name}"
+    #       mkdir tmp
+    #       cd tmp
+    #       dotnet new ${template_name} --name TestInstance
+    #       dotnet build
+    #       cd ..
+    #       rm -rf tmp
+    #    done <<< "${templates}"
     - name: Deploy
       run: |
         dotnet nuget push -s https://api.nuget.org/v3/index.json app/packed/*.nupkg -k ${{ secrets.NUGETKEY }} > push_log || grep "409" push_log
